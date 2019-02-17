@@ -1,4 +1,4 @@
-package com.zoy.rabbitmq.zoyrabbitmqlearning;
+package com.zoy.rabbitmq;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
