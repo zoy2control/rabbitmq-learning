@@ -1,7 +1,6 @@
-
-ch1-1/mvnw
-ch1-1/mvnw.cmd
-ch1-1/.mvn/wrapper/maven-wrapper.jar
-ch1-1/.mvn/wrapper/maven-wrapper.properties
-ch1-1/.mvn/wrapper/maven-wrapper.jar
+*/.mvn
+*/mvnw.*
+*/mvnw
 zoy-rabbitmq-learning.zip
+*/.mvn/*
+
