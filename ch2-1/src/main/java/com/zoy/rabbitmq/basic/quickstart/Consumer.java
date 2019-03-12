@@ -38,5 +38,39 @@ public class Consumer {
             String msgOfGetting = new String(delivery.getBody());
             System.out.println("消费端接受的消息：" + msgOfGetting);
         }
+
+        /* ·ppt演讲录制视频专用*/
+//            // 1、配置 ConnectionFactory
+//            ConnectionFactory connectionFactory = new ConnectionFactory();
+//            connectionFactory.setHost("127.0.0.1");
+//            connectionFactory.setPort(5672);
+//            connectionFactory.setVirtualHost("/");
+//
+//            // 2、通过 ConnectionFactory创建 Connection
+//            Connection connection = connectionFactory.newConnection();
+//
+//            // 3、通过 Connection 创建 Channel
+//            Channel channel = connection.createChannel();
+//
+//            // 4、声明 交换机和 队列
+//            String exchangeName = "test_hello_exchange";
+//            String routingKey = "test.hello.key";
+//            String queueName = "test_hello_queue";
+//
+//            channel.exchangeDeclare(exchangeName, "direct", true);
+//            channel.queueDeclare(queueName, true, false, false, null);
+//
+//            // 5、绑定 交换机和 队列
+//            channel.queueBind(queueName, exchangeName, routingKey);
+//
+//            // 6、消费者 监听队列
+//            QueueingConsumer consumer = new QueueingConsumer(channel);
+//            channel.basicConsume(queueName, true, consumer);
+//
+//            while (true) {
+//                QueueingConsumer.Delivery delivery = consumer.nextDelivery();
+//                String body = new String(delivery.getBody());
+//                System.out.println("消费端接受到的消息是：" + body);
+//            }
     }
 }

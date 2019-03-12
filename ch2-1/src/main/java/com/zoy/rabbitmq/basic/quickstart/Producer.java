@@ -31,5 +31,29 @@ public class Producer {
         // ·5、记得关闭相关连接（从内到外关闭）
         channel.close();
         connection.close();
+
+
+            /* ·ppt演讲录制视频专用*/
+//            // 1、配置 ConnectionFactory
+//            ConnectionFactory connectionFactory = new ConnectionFactory();
+//            connectionFactory.setHost("127.0.0.1");
+//            connectionFactory.setPort(5672);
+//            connectionFactory.setVirtualHost("/");
+//
+//            // 2、通过 ConnectionFactory创建 Connection
+//            Connection connection = connectionFactory.newConnection();
+//
+//            // 3、通过 Connection 创建 Channel
+//            Channel channel = connection.createChannel();
+//
+//            // 4、发送消息
+//            String exchangeName = "test_hello_exchange";
+//            String routingKey = "test.hello.key";
+//            String msg = "hello rabbitmq !!";
+//            channel.basicPublish(exchangeName, routingKey, null, msg.getBytes());
+//
+//            // 5、关闭连接
+//            channel.close();
+//            connection.close();
     }
 }
