@@ -178,12 +178,13 @@ public class RabbitMqConfig {
 //            }
 //        });
 
-//        1 适配器方式. 默认是有自己的方法名字的：handleMessage
-        // 可以自己指定一个方法的名字: consumeMessage
-        // 也可以添加一个转换器: 从字节数组转换为String
+        // ·eq2： 适配器方式。重写 .handleMessage()
+        // ·也可以添加一个转换器: 从字节数组转换为String
+        // ·这个类似于前面的 自定义消费者
         MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
         container.setMessageListener(adapter);
 
+        // ·eq3:可以自己指定 自定义消费者的其中一个方法的名字: consumeMessage
 //        MessageListenerAdapter adapter = new MessageListenerAdapter(new MessageDelegate());
 //        adapter.setDefaultListenerMethod("consumeMessage");
 //        adapter.setMessageConverter(new TextMessageConverter());
